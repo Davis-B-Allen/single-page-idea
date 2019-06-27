@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <title>Single Page Idea</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    fetch('README.md')
+      .then(function(response) {
+        document.body.innerHTML = marked(response.text());
+      })
+    </script>
+  </body>
+</html>
