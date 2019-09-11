@@ -23,7 +23,7 @@
     <div id="main-container">
       <script type="text/javascript">
       var endpoint = "README.md";
-      fetch(endpoint).then(function(response) {
+      fetch(endpoint, {cache: "no-store"}).then(function(response) {
         return response.text().then(function(text) {
           // document.body.innerHTML = marked(text);
           document.getElementById("main-container").innerHTML = marked(text);
